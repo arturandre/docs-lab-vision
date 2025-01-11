@@ -2,3 +2,14 @@ site_name: Documentação Rede e-Science
 site_url: https://vision.ime.usp.br/~lucasmsobrinho
 theme:
           name: material
+nav:
+  - Início: index.md
+  - Primeiros passos: getting-started.md
+  - Regras: rules.md
+  - Tutoriais:
+    - Instalando e configurando o ambiente de trabalho: tutorials/install-python.md
+    - Acessando e editando código remotamente: tutorials/editing-code.md
+    - Executando tarefas em segundo plano: tutorials/running-jobs.md
+    - Quais recursos estão disponíveis e quanto estou usando?: tutorials/resources.md
+  - Arquitetura da rede: architecture.md
+  - Boas Práticas: best-practices.md
