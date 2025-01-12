@@ -7,7 +7,7 @@ nav:
   - Primeiros passos: getting-started.md
   - Regras: rules.md
   - Tutoriais:
-    - Instalando e configurando o ambiente de trabalho: tutorials/install-python.md
+    - Instalando e configurando o ambiente de trabalho: tutorials/configuring-workplace.md
     - Acessando e editando código remotamente: tutorials/editing-code.md
     - Executando tarefas em segundo plano: tutorials/running-jobs.md
     - Quais recursos estão disponíveis e quanto estou usando?: tutorials/resources.md
