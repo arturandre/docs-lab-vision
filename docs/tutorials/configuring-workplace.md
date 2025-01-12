@@ -1,5 +1,4 @@
 # Instalando e configurando o seu ambiente de trabalho
-(rascunho - em construção)
 
 Para usar e configurar ambientes python, recomendamos baixar e instalar o miniconda.
 

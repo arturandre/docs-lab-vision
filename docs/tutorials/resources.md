@@ -1,5 +1,4 @@
 # Quais recursos estão disponíveis e quanto estou usando?
-(em construção)
 
 ## recursos
 - processamento cpu
