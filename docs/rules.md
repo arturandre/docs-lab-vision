@@ -26,7 +26,7 @@ Para saber quanto espaço você ocupa no servidor, digite:
 ```bash
 cd ~
 du -sh
-
+```
 
 [saiba mais sobre du -sh](https://explainshell.com/explain?cmd=du+-sh+)
 
