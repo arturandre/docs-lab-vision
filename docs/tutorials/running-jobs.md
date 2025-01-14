@@ -20,7 +20,7 @@ O comando `nohup` (no hang-up) permite que um processo continue rodando mesmo qu
 
 ### Exemplo:
 ```bash
-nohup python script.py &
+nohup python script.py
 ```
 
 - O comando salva a saída padrão em um arquivo chamado `nohup.out` por padrão.

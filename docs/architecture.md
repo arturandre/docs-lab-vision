@@ -1,8 +1,9 @@
 # Arquitetura da Rede eScience
 
-- how it works?
-- usable machines
+- Como funciona a rede vision?
+    - Como funcionam os armazenamentos $HOME e $SCRATCH? e o "/misc"?
 
-- scratch
-- shared storage
-- machine specs  (cpu, gpu, ...)
+- Quais máquinas estão disponíveis?
+- Existe algum serviço de monitoramento?
+
+- Quais são as especificações das máquinas ?  (cpu, gpu, ...)

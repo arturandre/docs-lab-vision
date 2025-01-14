@@ -2,7 +2,6 @@
 
 Editar códigos que serão executados em uma máquina remota, como na rede vision, pode ser complicado, ainda mais se forem necessários testes, experimentações ou prototipagem. Executar localmente e enviar o código via git não é produtivo.
 
-
 ## vscode
 O vscode e outras IDEs modernas permitem acesso de pastas via ssh, agilizando bastante o desenvolvimento.
 - instale extensão apropriada

@@ -7,7 +7,7 @@ status:
 - [2] index
 - [1] architecture
 - [0] best-practices
-- [0] getting-started
+- [1] getting-started
 - [2] rules
 - [1] tutorials/configuring-workplace
 - [1] tutorials/resources

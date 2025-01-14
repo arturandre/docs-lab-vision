@@ -7,10 +7,10 @@ NUNCA, mas NUNCA mesmo, use a máquina de entrada para fazer experimentos.
 ### 2 - Múltipos processos
 NUNCA, mas NUNCA mesmo, entupa as máquinas com seus processos, como se você fosse o único usuário da rede. [Aprenda a usar o comando nice do linux](tutorials/resources.md).
 
-### 3 - Muitas operações de escrita e leitura.
+### 3 - Muitas operações de escrita e leitura
 Caso você precise executar processos que realizem muitas operações de entrada/saída (gravação e leitura de arquivos em disco), você deve usar o disco local de cada máquina e, depois, copiar os resultados para o seu diretório. Isso reduz o consumo de banda da rede e acelera a execução de seus processos. Para isso, escreva para adminvision@ime.usp.br solicitando a criação de uma pasta para você (geralmente em /misc/users).
 
-### 4 - Experimentos
+### 4 - Força bruta
 NÃO faça ciência baseada em bruta-força! Pense no seu problema, discuta com a sua orientadora, ou com o seu orientador.
 
 ### 5 - Lista de emails
