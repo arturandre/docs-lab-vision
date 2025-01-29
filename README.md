@@ -1,5 +1,7 @@
 # docs e-science
 
+Instalando:
+- pip install mkdocs
 
-build:
-mkdocs build -c -d ~/www/
+Executando na vision, compila os arquivos estáticos direto na sua página pessoal:
+- mkdocs build -c -d ~/www/
