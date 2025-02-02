@@ -54,4 +54,4 @@ screen -r minha_sessao
 
 Atente-se às tarefas que está executando. Lembre-se que essa é uma rede compartilhada.
 
-Para ver como avaliar os recursos que você está usando acesse o tutorial: [Quais recursos estão disponíveis e quanto estou usando?](tutorials/resources.md).
+Para ver como avaliar os recursos que você está usando acesse o tutorial: [Quais recursos estão disponíveis e quanto estou usando?](resources.md).

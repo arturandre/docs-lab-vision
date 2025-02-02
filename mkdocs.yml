@@ -1,7 +1,16 @@
-site_name: Documentação Rede e-Science
+site_name: Documentação Rede Vision
 site_url: https://vision.ime.usp.br/~lucasmsobrinho
+site_description: Página de documentação com informações centralizadas, tutoriais e melhores práticas para usuários do Lab Vision.
+
+repo_url: https://www.github.com/lucasmsobrinho/docs-lab-vision
+edit_uri: blob/master/docs/
+repo_name: docs-lab-vision
+
 theme:
-          name: material
+        name: material
+        features:
+                - content.action.edit
+
 nav:
   - Início: index.md
   - Primeiros passos: getting-started.md
@@ -13,3 +22,9 @@ nav:
     - Quais recursos estão disponíveis e quanto estou usando?: tutorials/resources.md
   - Arquitetura da rede: architecture.md
   - Boas Práticas: best-practices.md
+
+
+markdown_extensions:
+  - footnotes
+  - admonition
+
