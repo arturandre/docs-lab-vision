@@ -11,6 +11,11 @@ theme:
         features:
                 - content.action.edit
 
+plugins:
+  - glightbox
+  - git-committers:
+          repository: lucasmsobrinho/docs-lab-vision
+
 nav:
   - Início: index.md
   - Primeiros passos: getting-started.md
@@ -23,8 +28,9 @@ nav:
   - Arquitetura da rede: architecture.md
   - Boas Práticas: best-practices.md
 
-
 markdown_extensions:
-  - footnotes
   - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
 
