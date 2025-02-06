@@ -1,5 +1,5 @@
 site_name: Documentação Rede Vision
-site_url: https://vision.ime.usp.br/~lucasmsobrinho
+site_url: https://vision.ime.usp.br/~rodrigocm
 site_description: Página de documentação com informações centralizadas, tutoriais e melhores práticas para usuários do Lab Vision.
 
 repo_url: https://www.github.com/lucasmsobrinho/docs-lab-vision
@@ -20,6 +20,7 @@ nav:
     - Acessando e editando código remotamente: tutorials/editing-code.md
     - Executando tarefas em segundo plano: tutorials/running-jobs.md
     - Quais recursos estão disponíveis e quanto estou usando?: tutorials/resources.md
+    - Configurando o acesso a GPU: tutorials/using-gpu.md
   - Arquitetura da rede: architecture.md
   - Boas Práticas: best-practices.md
 

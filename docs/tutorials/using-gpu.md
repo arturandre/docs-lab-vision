@@ -14,7 +14,7 @@ Agora que sabemos o que é GPU, precisamos de uma forma para utilizar esse poder
 
 ## Setup para PyTorch
 
-O PyTorch é uma das mais famosas bibliotecas para desenvolvimento de sistemas de aprendizado de máquina, e muito conhecida por ser utilizada em grandes sistemas e como ferramenta essencial para pesquisadores da área. Você pode encontrar a (documentação do PyTorch aqui)[https://pytorch.org/].
+O PyTorch é uma das mais famosas bibliotecas para desenvolvimento de sistemas de aprendizado de máquina, e muito conhecida por ser utilizada em grandes sistemas e como ferramenta essencial para pesquisadores da área. Você pode encontrar a [documentação do PyTorch aqui](https://pytorch.org/).
 
 Tendo um ambiente Conda instalado e configurado, podemos entrar nesse ambiente com:
 
@@ -22,11 +22,11 @@ Tendo um ambiente Conda instalado e configurado, podemos entrar nesse ambiente c
 conda activate nome_ambiente
 ```
 
-Agora, é possível instalar todas as dependências necessárias nesse ambiente, incluindo o PyTorch. A partir de 2025, não é mais possível instalar pacotes torch usando conda, então é necessário fazer essa instalação usando pip. Para escolher a configuração da biblioteca que deseja instalar, entre nesse [link](https://pytorch.org/get-started/locally/) e escolha as opções desejadas.
+Agora, é possível instalar todas as dependências necessárias nesse ambiente, incluindo o PyTorch. A partir de 2025, não é mais possível instalar pacotes torch usando conda, então é necessário fazer essa instalação usando pip. Para escolher a configuração da biblioteca que deseja instalar, entre nesse [link](https://pytorch.org/get-started/locally/) e escolha as opções desejadas. Se desejar, siga a configuração da imagem:
 
-![PyTorch config!](/images/pytorch-getting-started.png "PyTorch Getting Started")
+![PyTorch config](../images/pytorch-getting-started.png)
 
-Agora, basta executar o comando sugerido pelo site em alguma máquina da rede, e o PyTorch estará pronto para uso. Note que, ao escolher uma configuração, você provavelmente não conseguirá utilizar a GPU em todas as máquinas da vision, isso pois a versão do CUDA instalada em cada máquina pode variar. Verifique a versão do CUDA em cada máquina para instalar o PyTorch de acordo com sua preferência, e se necessário, tenha mais de um ambiente Conda, para possuir mais de uma versão da biblioteca instalada.
+Agora, basta executar o comando sugerido pelo site em seu ambiente conda, e o PyTorch estará pronto para uso. Note que, ao escolher uma configuração, você provavelmente não conseguirá utilizar a GPU em todas as máquinas da vision, isso pois a versão do CUDA instalada em cada máquina pode variar. Verifique a versão do CUDA em cada máquina para instalar o PyTorch de acordo com sua preferência, e se necessário, tenha mais de um ambiente Conda, para possuir mais de uma versão da biblioteca instalada.
 
 Para verificar a versão CUDA instalada em cada máquina, utilize: 
 
@@ -36,7 +36,7 @@ nvidia-smi
 
 Para verificar que a instalação correu corretamente e o uso da GPU está disponível em alguma máquina, utilize Python via terminal. Seguem comandos utilizados na máquina deepnine, com torch configurado com CUDA 12.4, e as respectivas saídas:
 
-```
+```python
 >>> import torch
 >>> torch.cuda.is_available()
 True
@@ -50,7 +50,7 @@ True
 
 Ao tentar utilizar os mesmos comandos na máquina deepten, que possui uma versão do CUDA mais antiga instalada, incompatível com a 12.4 do PyTorch, obtemos a seguinte saída:
 
-```
+```python
 >>> import torch
 >>> torch.cuda.is_available()
 UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 11020). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at /opt/conda/conda-bld/pytorch_1720538435607/work/c10/cuda/CUDAFunctions.cpp:108.)
@@ -60,30 +60,28 @@ False
 
 ## Setup para TensorFlow
 
-TensorFlow é outra famosa biblioteca para desenvolvimento de ML, desenvolvida pela Google para uso interno na empresa, e que atualmente é uma biblioteca de código aberto, disponibilizada sob a licença Apache 2.0. É comum o uso do Keras, uma API desenvolvida em cima do TensorFlow de código mais simples, que permite a construção de estruturas de ML em um ambiente mais user-friendly de desenvolvimento. Atualmente, o Keras está distribuído junto ao TensorFlow. A [documentação da biblioteca está disponível aqui](https://www.tensorflow.org/?hl=pt-br).
+TensorFlow é outra famosa biblioteca para desenvolvimento de ML, desenvolvida pela Google para uso interno na empresa, e que atualmente é uma biblioteca de código aberto, disponibilizada sob a licença Apache 2.0. 
 
-Atualmente, não é possível instalar as ferramentas de CUDA e cuDNN na vision para ter acesso ao uso da GPU com TensorFlow. Para conseguir utilizar essa ferramenta, podemos seguir dois passos.
+É comum o uso do Keras, uma API desenvolvida em cima do TensorFlow de código mais simples, que permite a construção de estruturas de ML em um ambiente mais user-friendly de desenvolvimento. Atualmente o Keras está distribuído junto ao TensorFlow. A [documentação da biblioteca está disponível aqui](https://www.tensorflow.org/?hl=pt-br).
 
-### Instalar TensorFlow já configurado via docker
-
-Para seguir essa instalação, que facilita o uso da GPU, você pode seguir os passos descritos nesse [link](https://www.tensorflow.org/install/docker?hl=pt-br).
+Atualmente, não é possível instalar as ferramentas de CUDA e cuDNN na vision para ter acesso ao uso da GPU com TensorFlow. Para conseguir utilizar essas ferramentas, é necessário realizar instalações que dependem de acesso de admin (sudo), as quais usuários da rede não tem permissão. Para contornar essa situação, temos:
 
 ### Instalar TensorFlow-GPU
 
 Essa versão do TensorFlow possui um suporte mais antigo, porém que agrega o CUDA e cuDNN na instalação, portanto não é necessário instalar manualmente essas ferramentas. Para seguir a instalação diretamente em um environment conda (com Python 3.6-3.9), podemos utilizar:
 
-```
+```bash
 conda create --name tf-gpu tensorflow-gpu
 conda activate tf-gpu
 ```
 
 Assim, sua GPU já deve estar disponível para uso com TensorFlow. Note que, por ser uma versão mais antiga, algumas máquinas da vision não terão suporte para o uso de GPU, devido a versão do CUDA instalada nelas. Para verificar que a instalação foi concluída com sucesso, podemos rodar em uma máquina compatível:
 
-```
+```python
 >>> import tensorflow as tf
 >>> print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
 [...]
-2025-02-02 16:04:00.457739: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0, 1, 2, 3
+[2025-02-02 16:04:00.457739: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0, 1, 2, 3
 Num GPUs Available:  4
 ```
 
