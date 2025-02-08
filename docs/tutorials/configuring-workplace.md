@@ -15,7 +15,7 @@ Para se conectar ao servidor da Rede Vision, será necessário utilizar o protoc
 
 ### 1. Instalando o SSH
 
-Caso não tenha o SSH instalado, instale-o com o comando:
+Caso não tenha o SSH, instale-o com o comando:
 
 ```bash
 sudo apt install openssh-client
