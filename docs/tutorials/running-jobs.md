@@ -16,6 +16,9 @@ O operador `&` permite que você execute um comando em segundo plano diretamente
 * Você pode continuar usando o terminal enquanto o script está em execução.
 * Para acessar os processos em execução em segundo plano você pode usar o comando `jobs`.
 
+!!! danger "Cuidado"
+	Fechar o terminal irá matar o processo. Use o `&` em conjunto com o `nohup` para evitar isso.
+
 ### Redirecionando a saída padrão com nohup
 
 Caso você queira salvar a saída padrão dessa execução, é possível usar o comando `nohup` (no hang-up), que a redireciona para um arquivo designado (`nohup.out` por padrão). Além disso, ele permite que o processo continue rodando mesmo que você encerre a sessão SSH ou feche o terminal.
