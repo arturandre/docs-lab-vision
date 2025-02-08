@@ -43,12 +43,12 @@ ls: cannot access /home/user/.ssh/id_*.pub: No such file or directory
 Caso tenha um chave e não deseje sobrescrevê-la pode pular esta etapa.
 
 Para gerar a chave pública SSH, utilize o comando:
+
 ```bash
 ssh-keygen -t rsa
 ``` 
-Isso gerará duas chaves: uma privada (arquivo ```~/.ssh/id_rsa```), usada para autenticar suas conexões, e uma pública (```~/.ssh/id_rsa.pub```), usada para se conectar aos servidores.
 
-Agora, basta copiar a chave para o servidor da Rede Vision para obter acesso.
+Durante a geração da chave, será necessário confirmar o local de salvamento (```~/.ssh/id_rsa```) e definir uma senha — ambos são opcionais e, caso não queira, basta pressionar Enter. Esse processo criará duas chaves: uma privada (```~/.ssh/id_rsa```), usada para autenticar suas conexões, e uma pública (```~/.ssh/id_rsa.pub```), que deve ser copiada para o servidor da Rede Vision para obter acesso.
 
 ### 3. Copiando a chave SSH pública para a Rede Vision
 
@@ -58,7 +58,7 @@ Há 2 comandos possíveis para se copiar a chave para os servidores, sendo o pri
 ssh-copy-id <seu_usuario>@vision.ime.usp.br
 ``` 
 
-Sera solicitado a senha da sua conta ( aquela enviada por email ) e após isso o acesso estará pronto, mas caso o primeiro comando não funcione utilize:
+Será solicitado a senha da sua conta ( aquela enviada por email ) e após isso o acesso estará pronto, mas caso o primeiro comando não funcione utilize:
 
 ```bash
 cat ~/.ssh/id_rsa.pub | ssh <seu_usuario>@vision.ime.usp.br "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
