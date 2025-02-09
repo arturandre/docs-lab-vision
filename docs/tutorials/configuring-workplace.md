@@ -87,11 +87,11 @@ O arquivo baixado deve ter um nome parecido com "Anaconda3-2024.10-1-Linux-x86_6
 Instalado esse arquivo, devemos mandá-lo à máquina base da Rede e-Science. Para isso,
 rode o comando:
 ```bash
-scp <endereço do .sh baixado> <user_science>@vision.ime.usp.br
+scp <endereço do .sh baixado> <user_science>@vision.ime.usp.br:~
 ```
 Onde `<user_science>` deve ser substituído pelo nome de seu usuário na Rede e-Science e `<endereço .sh>`, pelo endereço do arquivo .sh em sua máquina. Vale ressaltar que será necessário inserir sua senha após rodar o comando, caso não tenha configurado ainda o acesso remoto sem senha, cujo tutorial está disponível na página "Acessando e editando código remotamente", localizada dentro da seção "Tutoriais" desta documentação.
 
-Exemplo: `scp ~/Downloads/Anaconda3-2024.10-1-Linux-x86_64.sh usuario@vision.ime.usp.br`
+Exemplo: `scp ~/Downloads/Anaconda3-2024.10-1-Linux-x86_64.sh usuario@vision.ime.usp.br:~`
 
 Após a execução deste comando, o arquivo estará disponível na sua home em qualquer máquina da Rede e-Science. Portanto, acesse a máquina base desta rede com o comando:
 ```bash
