@@ -178,27 +178,27 @@ Durante a geração da chave, será necessário confirmar o local de salvamento 
 Há 2 comandos possíveis para se copiar a chave para os servidores, sendo o primeiro:
 
 ```bash
-ssh-copy-id <seu_usuario>@vision.ime.usp.br
+ssh-copy-id <user_science>@vision.ime.usp.br
 ``` 
 
-Será solicitado a senha da sua conta ( aquela enviada por email ) e após isso o acesso estará pronto, mas caso o primeiro comando não funcione utilize:
+Após executado o comando acima, será solicitado a senha da sua conta ( aquela enviada por email ) e após isso o acesso estará pronto, mas caso este primeiro comando não funcione utilize:
 
 ```bash
-cat ~/.ssh/id_rsa.pub | ssh <seu_usuario>@vision.ime.usp.br "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+cat ~/.ssh/id_rsa.pub | ssh <user_science>@vision.ime.usp.br "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
 ```
 
-Este comando não solicitará sua senha e, após isso, seu acesso a Rede Vision está pronto! Para se conectar utilize o comando:
+Este comando não solicitará sua senha e, após isso, seu acesso à Rede Vision está pronto! Para se conectar utilize o comando:
 
 ```bash
-ssh <seu_usuario@vision.ime.usp.br> 
+ssh <user_science>@vision.ime.usp.br 
 ```
 
-E com isso, você estará conectado a máquina de entrada ( aquela que nunca se deve fazer experimentos! ).
+E com isso, você estará conectado à máquina de entrada ( lembra que nunca se deve fazer experimentos nela! ).
 
 ## 3. Permissões e acessos
+Na rede e-Science, um usuário que não seja administrador não tem acesso aos comandos apt-get e sudo, essenciais para a realização de diversas tarefas. Sendo assim, é necessário não só usar ambientes de desenvolvimento como os do anaconda caso deseje usar pacotes adicionais em seus projetos, mas também é necessário contatar a administração da rede caso seja negado o acesso a algum recurso que você precise usar. Isso pode ser feito por meio do envio de um email para: `adminvision@ime.usp.br`. 
 
-
-### 3. Configurando o Arquivo `.bashrc`
+## 4. Configurando o Arquivo `.bashrc`
 - Alias úteis para comandos comuns
 
 
