@@ -198,8 +198,8 @@ conda list
 ## 3. Permissões e acessos
 Na Rede e-Science, um usuário que não seja administrador não tem acesso aos comandos apt-get e sudo, essenciais para a realização de diversas tarefas. Sendo assim, é necessário não só usar ambientes de desenvolvimento como os do anaconda caso deseje usar pacotes adicionais em seus projetos, mas também é necessário contatar a administração da rede caso seja negado o acesso a algum recurso que você precise usar. Isso pode ser feito por meio do envio de um email para: `adminvision@ime.usp.br`. 
 
-## 4. Configurando o Arquivo `.bashrc`
-- Alias úteis para comandos comuns
+<!-- ## 4. Configurando o Arquivo `.bashrc`
+- Alias úteis para comandos comuns -->
 
 
 
