@@ -2,9 +2,72 @@
 
 Configurar seu ambiente de trabalho corretamente é essencial para aproveitar os recursos do laboratório. Este documento fornece um guia passo a passo para configurações úteis mais comuns.
 
-Para usar e configurar ambientes python, recomendamos baixar e instalar o anaconda, cujo uso e instalação estão explicados nessa página. Ademais, supomos o uso do sistema operacional linux, de modo que, nesse tutorial, todos os comandos foram testados em um terminal linux. Nesta página, encontram-se também os tutorias para o acesso com ssh na rede e-Science e para o acesso sem senha dos computadores desta rede.
+Para usar e configurar ambientes python, recomendamos baixar e instalar o anaconda, cujo uso e instalação estão explicados nessa página. Ademais, supomos o uso do sistema operacional linux, de modo que, nesse tutorial, todos os comandos foram testados em um terminal linux. Nesta página, encontram-se também os tutorias para o acesso com ssh na Rede e-Science e para o acesso sem senha dos computadores desta rede.
 
-## 1. Anaconda 
+## 1. Conectando-se à Rede e-Science sem senha (Acesso ao Servidor via SSH)
+
+Para se conectar ao servidor da Rede e-Science sem precisar informar a senha, será necessário não só utilizar o protocolo SSH, mas também alocar sua chave SSH pública para ela.
+
+### 1. Instalando o SSH
+
+Caso não tenha o SSH, instale-o com o comando:
+
+```bash
+sudo apt install openssh-client
+```
+Se não tiver certeza se já está instalado, você pode verificar com:
+
+```bash
+ssh -V
+```
+Se aparecer algo como 'command not found', significa que o SSH ainda não está instalado.
+
+### 2. Criando uma chave SSH
+
+Antes de criar uma nova chave, verifique se ja há alguma chave SSH para não sobrescrever suas configurações com o comando:
+
+```bash
+ls -al ~/.ssh/id_*.pub
+```
+Se não houver chave, você verá o seguinte resultado:
+
+```bash
+ls: cannot access /home/user/.ssh/id_*.pub: No such file or directory
+```
+
+Caso tenha um chave e não deseje sobrescrevê-la pode pular esta etapa.
+
+Para gerar a chave pública SSH, utilize o comando:
+
+```bash
+ssh-keygen -t rsa
+``` 
+
+Durante a geração da chave, será necessário confirmar o local de salvamento (```~/.ssh/id_rsa```) e definir uma senha — ambos são opcionais e, caso não queira, basta pressionar Enter. Esse processo criará duas chaves: uma privada (```~/.ssh/id_rsa```), usada para autenticar suas conexões, e uma pública (```~/.ssh/id_rsa.pub```), que deve ser copiada para o servidor da Rede e-Science para obter acesso.
+
+### 3. Copiando a chave SSH pública para a Rede e-Science
+
+Há 2 comandos possíveis para se copiar a chave para os servidores, sendo o primeiro:
+
+```bash
+ssh-copy-id <user_science>@vision.ime.usp.br
+``` 
+
+Após executado o comando acima, será solicitado a senha da sua conta ( aquela enviada por email ) e após isso o acesso estará pronto, mas caso este primeiro comando não funcione utilize:
+
+```bash
+cat ~/.ssh/id_rsa.pub | ssh <user_science>@vision.ime.usp.br "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+```
+
+Este comando não solicitará sua senha e, após isso, seu acesso à Rede e-Science está pronto! Para se conectar utilize o comando:
+
+```bash
+ssh <user_science>@vision.ime.usp.br 
+```
+
+E assim, você estará conectado à máquina de entrada ( lembra que nunca se deve fazer experimentos nela! ).
+
+## 2. Anaconda 
 
 ### O que é anaconda
 
@@ -12,25 +75,25 @@ Anaconda é uma plataforma para se desenvolver projetos em python e R. Assim, di
 
 https://en.wikipedia.org/wiki/Anaconda_(Python_distribution)
 
-Para a rede e-Science, temos um interesse especial no Anaconda tendo em vista que o usuário comum, ou seja, um usuário que não seja administrador, não tem acesso ao comando sudo, essencial para instalar pacotes. Sendo assim, ao usar Anaconda, contornamos o problema de não se ter permissão para executar o comando sudo.
+Para a Rede e-Science, temos um interesse especial no Anaconda tendo em vista que o usuário comum, ou seja, um usuário que não seja administrador, não tem acesso ao comando sudo, essencial para instalar pacotes. Sendo assim, ao usar Anaconda, contornamos o problema de não se ter permissão para executar o comando sudo.
 
-### Instalando o anaconda no meu usuário da rede e-Science
+### Instalando o anaconda no meu usuário da Rede e-Science
 Como primeiro passo, baixe, no seu computador, a versão mais recente do anaconda disponível neste repositório:
 
 https://repo.anaconda.com/archive/
 
 O arquivo baixado deve ter um nome parecido com "Anaconda3-2024.10-1-Linux-x86_64.sh".
 
-Instalado esse arquivo, devemos mandá-lo à máquina base da rede e-Science. Para isso,
+Instalado esse arquivo, devemos mandá-lo à máquina base da Rede e-Science. Para isso,
 rode o comando:
 ```bash
 scp <endereço do .sh baixado> <user_science>@vision.ime.usp.br
 ```
-Onde `<user_science>` deve ser substituído pelo nome de seu usuário na rede e-Science e `<endereço .sh>`, pelo endereço do arquivo .sh em sua máquina. Vale ressaltar que será necessário inserir sua senha após rodar o comando, caso não tenha configurado ainda o acesso remoto sem senha, cujo tutorial está disponível na página "Acessando e editando código remotamente", localizada dentro da seção "Tutoriais" desta documentação.
+Onde `<user_science>` deve ser substituído pelo nome de seu usuário na Rede e-Science e `<endereço .sh>`, pelo endereço do arquivo .sh em sua máquina. Vale ressaltar que será necessário inserir sua senha após rodar o comando, caso não tenha configurado ainda o acesso remoto sem senha, cujo tutorial está disponível na página "Acessando e editando código remotamente", localizada dentro da seção "Tutoriais" desta documentação.
 
 Exemplo: `scp ~/Downloads/Anaconda3-2024.10-1-Linux-x86_64.sh usuario@vision.ime.usp.br`
 
-Após a execução deste comando, o arquivo estará disponível na sua home em qualquer máquina da rede e-Science. Portanto, acesse a máquina base desta rede com o comando:
+Após a execução deste comando, o arquivo estará disponível na sua home em qualquer máquina da Rede e-Science. Portanto, acesse a máquina base desta rede com o comando:
 ```bash
 ssh <user_science>@vision.ime.usp.br
 ``` 
@@ -42,9 +105,9 @@ bash Anaconda3-2024.10-1-Linux-x86_64.sh
 ```
 onde `Anaconda3-2024.10-1-Linux-x86_64.sh` deve ser substituído pelo arquivo baixado.
 
-Executado esse comando, será mostrado os termos de licença do Anaconda. Basta aceitá-los digitando 'yes' quando requisitado e configurar o local de instalação que o anaconda será instalado no seu usuário da rede e-Science.
+Executado esse comando, será mostrado os termos de licença do Anaconda. Basta aceitá-los digitando 'yes' quando requisitado e configurar o local de instalação que o anaconda será instalado no seu usuário da Rede e-Science.
 
-### Configurando o anaconda no meu usuário da rede e-Science
+### Configurando o anaconda no meu usuário da Rede e-Science
 
 A fim de configurar o anaconda, será necessário ativá-lo pela primeira vez, o que é feito a partir da execução do seguinte comando:
 
@@ -59,7 +122,7 @@ eval "$(/home/user1/anaconda3/bin/conda shell.bash hook)"
 ```
 
 
-Agora, o conda está ativado no ambiente base e já é possível usá-lo livremente na rede e-Science. Para aprender a usar o anaconda, verifique a seção seguinte do tutorial, 'Uso do anaconda'.
+Agora, o conda está ativado no ambiente base e já é possível usá-lo livremente na Rede e-Science. Para aprender a usar o anaconda, verifique a seção seguinte do tutorial, 'Uso do anaconda'.
 
 ### Uso do anaconda
 
@@ -132,71 +195,8 @@ Para verificar os pacotes instalados e disponíveis no ambiente atual, basta exe
 conda list
 ```
 
-## 2. Conectando-se à Rede Vision (Acesso ao Servidor via SSH)
-
-Para se conectar ao servidor da Rede Vision, será necessário utilizar o protocolo SSH para o acesso.
-
-### 1. Instalando o SSH
-
-Caso não tenha o SSH, instale-o com o comando:
-
-```bash
-sudo apt install openssh-client
-```
-Se não tiver certeza se já está instalado, você pode verificar com:
-
-```bash
-ssh -V
-```
-Se aparecer algo como 'command not found', significa que o SSH ainda não está instalado.
-
-### 2. Criando uma chave SSH
-
-Antes de criar uma nova chave, verifique se ja há alguma chave SSH para não sobrescrever suas configurações com o comando:
-
-```bash
-ls -al ~/.ssh/id_*.pub
-```
-Se não houver chave, você verá o seguinte resultado:
-
-```bash
-ls: cannot access /home/user/.ssh/id_*.pub: No such file or directory
-```
-
-Caso tenha um chave e não deseje sobrescrevê-la pode pular esta etapa.
-
-Para gerar a chave pública SSH, utilize o comando:
-
-```bash
-ssh-keygen -t rsa
-``` 
-
-Durante a geração da chave, será necessário confirmar o local de salvamento (```~/.ssh/id_rsa```) e definir uma senha — ambos são opcionais e, caso não queira, basta pressionar Enter. Esse processo criará duas chaves: uma privada (```~/.ssh/id_rsa```), usada para autenticar suas conexões, e uma pública (```~/.ssh/id_rsa.pub```), que deve ser copiada para o servidor da Rede Vision para obter acesso.
-
-### 3. Copiando a chave SSH pública para a Rede Vision
-
-Há 2 comandos possíveis para se copiar a chave para os servidores, sendo o primeiro:
-
-```bash
-ssh-copy-id <user_science>@vision.ime.usp.br
-``` 
-
-Após executado o comando acima, será solicitado a senha da sua conta ( aquela enviada por email ) e após isso o acesso estará pronto, mas caso este primeiro comando não funcione utilize:
-
-```bash
-cat ~/.ssh/id_rsa.pub | ssh <user_science>@vision.ime.usp.br "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
-```
-
-Este comando não solicitará sua senha e, após isso, seu acesso à Rede Vision está pronto! Para se conectar utilize o comando:
-
-```bash
-ssh <user_science>@vision.ime.usp.br 
-```
-
-E com isso, você estará conectado à máquina de entrada ( lembra que nunca se deve fazer experimentos nela! ).
-
 ## 3. Permissões e acessos
-Na rede e-Science, um usuário que não seja administrador não tem acesso aos comandos apt-get e sudo, essenciais para a realização de diversas tarefas. Sendo assim, é necessário não só usar ambientes de desenvolvimento como os do anaconda caso deseje usar pacotes adicionais em seus projetos, mas também é necessário contatar a administração da rede caso seja negado o acesso a algum recurso que você precise usar. Isso pode ser feito por meio do envio de um email para: `adminvision@ime.usp.br`. 
+Na Rede e-Science, um usuário que não seja administrador não tem acesso aos comandos apt-get e sudo, essenciais para a realização de diversas tarefas. Sendo assim, é necessário não só usar ambientes de desenvolvimento como os do anaconda caso deseje usar pacotes adicionais em seus projetos, mas também é necessário contatar a administração da rede caso seja negado o acesso a algum recurso que você precise usar. Isso pode ser feito por meio do envio de um email para: `adminvision@ime.usp.br`. 
 
 ## 4. Configurando o Arquivo `.bashrc`
 - Alias úteis para comandos comuns
