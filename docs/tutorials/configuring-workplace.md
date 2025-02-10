@@ -120,9 +120,13 @@ ou algum comando parecido, que será exibido como orientação do próprio anaco
 ```bash
 eval "$(/home/user1/anaconda3/bin/conda shell.bash hook)"
 ```
+Quando entrar no ambiente base do anaconda, ou seja, quando o seu terminal parecer algo como `(base)user_science@net03:~$ `, rode o comando:
 
+```bash
+conda init
+```
 
-Agora, o conda está ativado no ambiente base e já é possível usá-lo livremente na Rede e-Science. Para aprender a usar o anaconda, verifique a seção seguinte do tutorial, 'Uso do anaconda'.
+Agora, o conda está ativado no ambiente base e está configurado, de modo que é possível usá-lo livremente na Rede e-Science. Para aprender a usar o anaconda, verifique a seção seguinte do tutorial, 'Uso do anaconda'.
 
 ### Uso do anaconda
 
