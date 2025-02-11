@@ -39,7 +39,7 @@ Agora, o VS Code irá configurar automaticamente tudo necessário. Agora, basta 
 ![Connected machine status](../images_editing-code/connected_machine.png)
 
 !!! warning "Aviso" 
-    Isso irá conectá-lo à máquina base do servidor. Para encerrar a sessão, clique no ícone azul no canto inferior esquerdo e selecione 'Close Remote Connection', ou, para mudar de máquina, use o comando ```ssh <nome_da_maquina>``` no 'Command Palette', que pode ser aberto com `Ctrl + Shift + P` ou `F1`.
+    Isso irá conectá-lo à máquina de acesso do servidor. Para encerrar a sessão, clique no ícone azul no canto inferior esquerdo e selecione 'Close Remote Connection', ou, para mudar de máquina, use o comando ```ssh <nome_da_maquina>``` no 'Command Palette', que pode ser aberto com `Ctrl + Shift + P` ou `F1`.
 
 ### 3. Salvando as conexões a outra(s) máquina(s) 
 
