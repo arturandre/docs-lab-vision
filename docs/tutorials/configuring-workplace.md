@@ -190,7 +190,7 @@ conda install <package_name>
 onde `<package_name>` deve ser substituído pelo nome do pacote a ser instalado. Veja um exemplo:
 
 ```bash
-(myenv)user_science@deepone:~$ conda install numpy
+conda install numpy
 ```
 
 #### Verificar a lista de pacotes disponíveis no ambiente anaconda
