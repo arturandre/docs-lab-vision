@@ -38,7 +38,7 @@ ssh <user_science>@vision.ime.usp.br
 
 Agora, o VS Code irá configurar automaticamente tudo necessário. Agora, basta inserir sua senha da rede e-Science na barra superior e você estará conectado. No canto inferior esquerdo da tela, você verá algo como ```SSH: vision.ime.usp.br``` assim como segue na imagem:
 
-![Connected machine status](../images_editing-code/ssh:vision.ime.usp.br_vs_code.png)
+![Connected machine status](../images_editing-code/connected_machine.png)
 
 !!! Aviso 
     Isso irá conectá-lo à máquina base do servidor. Para encerrar a sessão, clique no ícone azul no canto inferior esquerdo e selecione 'Close Remote Connection', ou, para mudar de máquina, use o comando ```ssh <nome_da_maquina>``` no 'Command Palette', que pode ser aberto com `Ctrl + Shift + P` ou `F1`.
