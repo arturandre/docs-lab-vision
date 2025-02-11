@@ -8,13 +8,11 @@ O VS Code e outras IDEs modernas permitem acesso a pastas via SSH, o que agiliza
 
 Vale ressaltar que os comandos deste tutorial para a edição e execução de arquivos a partir do VS Code na rede e-Science devem ser executados em um terminal linux em sua máquina local.
 
-### 1. Instalando Remote - SSH e um cliente SSH compátivel com OpenSSH
+### 1. Instalando Remote - SSH e um client compátivel com OpenSSH
 
-Para realizar a conexão ao servidor, utilizaremos a extensão Remote - SSH da Microsoft. Você pode baixá-la através do seguinte link:
+Você pode baixar a extensão através da guia de extensões ou direto [marketplace do visualstudio](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh).
 
-[Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
-
-Feito isso, é necessário instalar um cliente SSH compatível com OpenSSH, para isso, execute:
+Feito isso, é necessário instalar um cliente SSH compatível com OpenSSH, caso ainda não tenha, execute em sua máquina local:
 
 ```bash
 sudo apt-get install openssh-client 
@@ -40,7 +38,7 @@ Agora, o VS Code irá configurar automaticamente tudo necessário. Agora, basta 
 
 ![Connected machine status](../images_editing-code/connected_machine.png)
 
-!!! Aviso 
+!!! warning "Aviso" 
     Isso irá conectá-lo à máquina base do servidor. Para encerrar a sessão, clique no ícone azul no canto inferior esquerdo e selecione 'Close Remote Connection', ou, para mudar de máquina, use o comando ```ssh <nome_da_maquina>``` no 'Command Palette', que pode ser aberto com `Ctrl + Shift + P` ou `F1`.
 
 ### 3. Salvando as conexões a outra(s) máquina(s) 
@@ -75,11 +73,11 @@ Aba "Remote Explorer" > passar o mouse em cima de `<nome_maquina>` > selecionar 
 
 Para abrir um diretório, arquivo ou workspace, você faz exatamente como faria na máquina local:
 	
-Open Folder > ...
+File > Open Folder > ...
     
 ou
 
-File > Open File... > ```arquivo ou diretório```
+File > Open File... > ```arquivo```
 
 Quando se trabalha com ambientes Python alternativos (como Anaconda, por exemplo), o VS Code oferece uma maneira simples de alternar entre esses ambientes. Após abrir ou criar um workspace no VS Code, a fim de selecionar o ambiente desejado, siga os seguintes passos:
 
