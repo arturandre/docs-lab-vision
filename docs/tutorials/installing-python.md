@@ -19,7 +19,7 @@ Como primeiro passo, baixe, no seu computador, a versão mais recente do minicon
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 ```
 
-Ao executar este comando, o arquivo `.sh` será baixado no mesmo diretório em que se rodou o código acima. Agora, devemos mandá-lo à máquina base da Rede e-Science. Para isso,
+Ao executar este comando, o arquivo `.sh` será baixado no mesmo diretório em que se rodou o código acima. Agora, devemos mandá-lo à máquina de acesso shell da Rede e-Science. Para isso,
 rode o comando:
 ```bash
 scp <endereço do .sh baixado> <user_science>@vision.ime.usp.br:~
@@ -28,12 +28,12 @@ Onde `<user_science>` deve ser substituído pelo nome de seu usuário na Rede e-
 
 Exemplo: `scp ~/Downloads/Miniconda3-latest-Linux-x86_64.sh usuario@vision.ime.usp.br:~`
 
-Após a execução deste comando, o arquivo estará disponível na sua home em qualquer máquina da Rede e-Science. Portanto, acesse a máquina base desta rede com o comando:
+Após a execução deste comando, o arquivo estará disponível na sua home em qualquer máquina da Rede e-Science. Portanto, acesse a máquina de acesso desta rede com o comando:
 ```bash
 ssh <user_science>@vision.ime.usp.br
 ``` 
 
-Estando na máquina base, como não é recomendado instalar nada a partir da máquina de entrada shell, devemos acessar outra máquina, como, por exemplo a deepzero, com o comando `ssh deepzero`. Quando a linha de comando do terminal se parecer com `user_science@deepzero:~$`, entramos na máquina `deepzero`. Agora, vamos, de fato instalar o miniconda. Assim, devemos executar o bash script anteriormente baixado a partir do seguinte comando:
+Estando nessa máquina, como não é recomendado instalar nada a partir da máquina de entrada shell, devemos acessar outra, como, por exemplo, a deepzero, com o comando `ssh deepzero`. Quando a linha de comando do terminal se parecer com `user_science@deepzero:~$`, entramos na máquina `deepzero`. Agora, vamos, de fato instalar o miniconda. Assim, devemos executar o bash script anteriormente baixado a partir do seguinte comando:
 
 ```bash
 bash Miniconda3-latest-Linux-x86_64.sh
