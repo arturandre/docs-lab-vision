@@ -16,7 +16,8 @@ nav:
   - Primeiros passos: getting-started.md
   - Regras: rules.md
   - Tutoriais:
-    - Instalando e configurando o ambiente de trabalho: tutorials/configuring-workplace.md
+    - Instalando e configurando o ambiente de trabalho: tutorials/installing-python.md
+    - Conectando-se com ssh sem senha: tutorials/access.md
     - Acessando e editando código remotamente: tutorials/editing-code.md
     - Executando tarefas em segundo plano: tutorials/running-jobs.md
     - Quais recursos estão disponíveis e quanto estou usando?: tutorials/resources.md
