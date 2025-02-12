@@ -1,8 +1,8 @@
 # Uso da GPU e CUDA
 
-Um dos principais motivos para utilizar a rede vision é utilizar suas máquinas para acelerar o processo de treinamento de modelos de Machine Learning (ML), porém, ao receber acesso a rede, é comum que exista dificuldades para utilizar a GPU e obter o melhor desempenho possível das máquinas. Nesse tutorial, iremos discorrer sobre GPUs, CUDA e maneiras para utilizar essas ferramentas de hardware para treinar seus modelos, seguindo as principais bibliotecas de Machine Learning atualmente.
+Um dos principais motivos para utilizar a rede vision é utilizar suas máquinas para acelerar o processo de treinamento de modelos de Machine Learning (ML), porém, ao receber acesso à rede, é comum que exista dificuldades para utilizar a GPU e obter o melhor desempenho possível das máquinas. Nesse tutorial, iremos discorrer sobre GPUs, CUDA e maneiras para utilizar essas ferramentas de hardware para treinar seus modelos, seguindo as principais bibliotecas de Machine Learning atualmente.
 
-Antes de seguir em frente, é necessário que o usuário já tenha feito [setup de um environment conda na rede](./configuring-workplace.md).
+Antes de seguir em frente, é necessário que o usuário já tenha feito [setup de um environment conda na rede](./installing-python.md).
 
 ## O que é GPU e CUDA?
 
