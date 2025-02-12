@@ -1,5 +1,6 @@
 site_name: Documentação Rede Vision
-site_url: https://vision.ime.usp.br/~lucasmsobrinho
+#lucasmsobrinho
+site_url: https://vision.ime.usp.br/~jplinaris
 site_description: Página de documentação com informações centralizadas, tutoriais e melhores práticas para usuários do Lab Vision.
 
 repo_url: https://www.github.com/lucasmsobrinho/docs-lab-vision
@@ -23,7 +24,7 @@ nav:
   - Regras: rules.md
   - Tutoriais:
     - Instalando e configurando o ambiente de trabalho: tutorials/installing-python.md
-    - Conectando-se com ssh sem senha: tutorials/access.md
+    - Conectando-se à rede com SSH: tutorials/access.md
     - Acessando e editando código remotamente: tutorials/editing-code.md
     - Executando tarefas em segundo plano: tutorials/running-jobs.md
     - Quais recursos estão disponíveis e quanto estou usando?: tutorials/resources.md

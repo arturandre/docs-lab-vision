@@ -13,27 +13,21 @@ Anaconda é uma plataforma para se desenvolver projetos em python e R. Sua vers�
 Em relação à Rede e-Science, temos um interesse especial no Miniconda, uma versão do Anaconda que não tem nenhum pacote pré-instalado, de forma que ocupa muito menos espaço que o anaconda3 e apresenta as mesmas funcionalidades.
 
 ### Instalando o miniconda no meu usuário da Rede e-Science
-Como primeiro passo, baixe, no seu computador, a versão mais recente do miniconda a partir da execução do seguinte comando:
+
+!!! warning "Atenção!"
+    Nunca use a máquina de entrada para executar processos que usam muitos recursos. Faça a instalação em outras máquinas (deeps, russas, cientistas, ...).
+
+Como primeiro passo, baixe, na rede e-Science, a versão mais recente do miniconda a partir da execução do seguinte comando:
 
 ```bash
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 ```
 
-Ao executar este comando, o arquivo `.sh` será baixado no mesmo diretório em que se rodou o código acima. Agora, devemos mandá-lo à máquina de acesso shell da Rede e-Science. Para isso,
-rode o comando:
-```bash
-scp <endereço do .sh baixado> <user_science>@vision.ime.usp.br:~
-```
-Onde `<user_science>` deve ser substituído pelo nome de seu usuário na Rede e-Science e `<endereço .sh>`, pelo endereço do arquivo .sh em sua máquina. Vale ressaltar que será necessário inserir sua senha após rodar o comando, caso não tenha configurado ainda o acesso remoto sem senha, cujo tutorial está disponível na página "Acessando e editando código remotamente", localizada dentro da seção "Tutoriais" desta documentação.
+Ao executar este comando, o arquivo `.sh` será baixado no mesmo diretório em que se rodou o código acima.
 
-Exemplo: `scp ~/Downloads/Miniconda3-latest-Linux-x86_64.sh usuario@vision.ime.usp.br:~`
+Se não souber como acessar uma máquina da rede e-Science, confira o [tutorial de acesso aqui](./access.md)
 
-Após a execução deste comando, o arquivo estará disponível na sua home em qualquer máquina da Rede e-Science. Portanto, acesse a máquina de acesso desta rede com o comando:
-```bash
-ssh <user_science>@vision.ime.usp.br
-``` 
-
-Estando nessa máquina, como não é recomendado instalar nada a partir da máquina de entrada shell, devemos acessar outra, como, por exemplo, a deepzero, com o comando `ssh deepzero`. Quando a linha de comando do terminal se parecer com `user_science@deepzero:~$`, entramos na máquina `deepzero`. Agora, vamos, de fato instalar o miniconda. Assim, devemos executar o bash script anteriormente baixado a partir do seguinte comando:
+Agora, para instalar de fato o miniconda, devemos executar o bash script anteriormente baixado a partir do seguinte comando:
 
 ```bash
 bash Miniconda3-latest-Linux-x86_64.sh

@@ -1,8 +1,19 @@
-# Conectando-se à Rede e-Science sem senha (Acesso ao Servidor via SSH)
+# Conectando-se à Rede e-Science via SSH
 
-Para se conectar ao servidor da Rede e-Science sem precisar informar a senha, será necessário não só utilizar o protocolo SSH, mas também alocar sua chave SSH pública para ela.
+## Acesso à Rede e-Science
 
-## 1. Instalando o SSH
+A fim de acessar a máquina de entrada da rede e-Science, basta executar o comando a seguir no terminal de sua máquina local:
+
+```bash
+ssh <seu_user_science>@vision.ime.usp.br
+```
+Note, porém, que você deve sempre inserir a senha para conseguir entrar na máquina de acesso, o que se torna cansativo ao longo do tempo. Sendo assim, nessa página, para se conectar ao servidor da Rede e-Science sem precisar informar a senha.
+
+## Acesso à Rede e-Science sem informar a senha
+
+Para acessar a rede e-Science e qualquer uma de suas máquinas sem informar a senha será necessário não só utilizar o protocolo SSH, mas também alocar sua chave SSH pública para ela.
+
+### 1. Instalando o SSH
 
 Caso não tenha o SSH, instale-o com o comando:
 
@@ -16,7 +27,7 @@ ssh -V
 ```
 Se aparecer algo como 'command not found', significa que o SSH ainda não está instalado.
 
-## 2. Criando uma chave SSH
+### 2. Criando uma chave SSH
 
 Antes de criar uma nova chave, verifique se ja há alguma chave SSH para não sobrescrever suas configurações com o comando:
 
@@ -39,7 +50,7 @@ ssh-keygen -t rsa
 
 Durante a geração da chave, será necessário confirmar o local de salvamento (```~/.ssh/id_rsa```) e definir uma senha — ambos são opcionais e, caso não queira, basta pressionar Enter. Esse processo criará duas chaves: uma privada (```~/.ssh/id_rsa```), usada para autenticar suas conexões, e uma pública (```~/.ssh/id_rsa.pub```), que deve ser copiada para o servidor da Rede e-Science para obter acesso.
 
-## 3. Copiando a chave SSH pública para a Rede e-Science
+### 3. Copiando a chave SSH pública para a Rede e-Science
 
 Há 2 comandos possíveis para se copiar a chave para os servidores, sendo o primeiro:
 
@@ -59,4 +70,4 @@ Este comando não solicitará sua senha e, após isso, seu acesso à Rede e-Scie
 ssh <user_science>@vision.ime.usp.br 
 ```
 
-E assim, você estará conectado à máquina de entrada ( lembra que nunca se deve fazer experimentos nela! ).
+E assim, você estará conectado à máquina de entrada ( lembre-se que nunca se deve fazer experimentos nela! ).
