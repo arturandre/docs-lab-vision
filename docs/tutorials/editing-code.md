@@ -8,7 +8,7 @@ O VS Code e outras IDEs modernas permitem acesso a pastas via SSH, o que agiliza
 
 Vale ressaltar que os comandos deste tutorial para a edição e execução de arquivos a partir do VS Code na rede e-Science devem ser executados em um terminal linux em sua máquina local.
 
-### 1. Instalando Remote - SSH e um client compátivel com OpenSSH
+### 1. Instalando Remote - SSH e um client compatível com OpenSSH
 
 Você pode baixar a extensão através da guia de extensões ou direto [marketplace do visualstudio](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh).
 
@@ -39,7 +39,7 @@ Agora, o VS Code irá configurar automaticamente tudo necessário. Agora, basta 
 ![Connected machine status](../images_editing-code/connected_machine.png)
 
 !!! warning "Aviso" 
-    Isso irá conectá-lo à máquina de acesso do servidor. Para encerrar a sessão, clique no ícone azul no canto inferior esquerdo e selecione 'Close Remote Connection', ou, para mudar de máquina, use o comando ```ssh <nome_da_maquina>``` no 'Command Palette', que pode ser aberto com `Ctrl + Shift + P` ou `F1`.
+    Isso irá conectá-lo à máquina de acesso shell. Para encerrar a sessão, clique no ícone azul no canto inferior esquerdo e selecione 'Close Remote Connection', ou, para mudar de máquina, use o comando ```ssh <nome_da_maquina>``` no 'Command Palette', que pode ser aberto com `Ctrl + Shift + P` ou `F1`.
 
 ### 3. Salvando as conexões a outra(s) máquina(s) 
 
@@ -85,7 +85,11 @@ Quando se trabalha com ambientes Python alternativos (como Anaconda, por exemplo
 
 2. Digite e selecione a opção "**Python: Create Environment...**" para criar um novo ambiente, ou escolha "**Python: Select Interpreter**" para selecionar um ambiente existente.
 
-A partir desse ponto, o ambiente de desenvolvimento está pronto, podendo compilar e editar códigos diretamente na sua conta e máquina sendo usada na rede e-Science em qualquer terminal aberto.
+Agora, para confirmar se o python está sendo executado corretamente, basta abrir um programa python de sua preferência e clicar no símbolo de executar do VS Code no canto superior direito, como segue na imagem:
+
+![Executar arquivo python teste](../images_editing-code/python_run_test.png)
+
+A partir desse ponto, se o programa foi executado corretamente, o ambiente de desenvolvimento está pronto, podendo compilar e editar códigos diretamente na sua conta e máquina sendo usada na rede e-Science em qualquer terminal aberto.
 
 
 ### ssh tunneling
