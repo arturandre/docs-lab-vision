@@ -26,6 +26,7 @@ nav:
     - Acessando e editando código remotamente: tutorials/editing-code.md
     - Executando tarefas em segundo plano: tutorials/running-jobs.md
     - Quais recursos estão disponíveis e quanto estou usando?: tutorials/resources.md
+    - Configurando o acesso a GPU: tutorials/using-gpu.md
   - Arquitetura da rede: architecture.md
   - Boas Práticas: best-practices.md
 
