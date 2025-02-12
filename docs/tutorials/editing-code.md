@@ -64,7 +64,8 @@ http://deepeleven:8888/lab?token=<TOKEN>
 - No canto superior direito, clique no botão `Select Kernel`
 - Selecione `Select Another Kernel` → `Existing Jupyter Server`
 - Cole o link modificado com o Token e conecte
-![img](
+
+![img](SelectKernel.png)
 
 ### 8. Verificar se a GPU está ativa
 No Jupyter Notebook, execute:
