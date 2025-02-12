@@ -2,7 +2,7 @@
 
 Um dos principais motivos para utilizar a rede vision é utilizar suas máquinas para acelerar o processo de treinamento de modelos de Machine Learning (ML), porém, ao receber acesso a rede, é comum que exista dificuldades para utilizar a GPU e obter o melhor desempenho possível das máquinas. Nesse tutorial, iremos discorrer sobre GPUs, CUDA e maneiras para utilizar essas ferramentas de hardware para treinar seus modelos, seguindo as principais bibliotecas de Machine Learning atualmente.
 
-Antes de seguir em frente, é necessário que o usuário já tenha feito setup de um environment conda na rede.
+Antes de seguir em frente, é necessário que o usuário já tenha feito [setup de um environment conda na rede](./configuring-workplace.md).
 
 ## O que é GPU e CUDA?
 
@@ -10,11 +10,11 @@ Primeiramente, é importante destacar alguns conceitos que irão facilitar o ent
 
 Ao tratarmos de ML, o uso da GPU (Graphic Processing Unit) se torna extremamente relevante, isso pois essas unidades de processamento são responsáveis por paralelizar diversas tarefas, o que proporciona a aceleração de operações matemáticas de alto custo computacional. No ramo de ML, isso é importante pois a todo momento operações como multiplicação matricial e tensorial são realizadas, e o custo computacional dessas operações é muito alto, e o tempo de realização ainda aumenta a depender da dimensionalidade dos tensores. Nesse sentido, se torna necessário encontrar maneiras de acelerar o processo para execução dessas tarefas.
 
-Agora que sabemos o que é GPU, precisamos de uma forma para utilizar esse poder computacional e acelerar treinamentos de redes neurais. Para isso, utilizamos o Compute Unified Device Architecture (CUDA), que é uma API da NVidia, destinada a computação paralela e que atua nas placas gráficas (em especial, desenvolvidas pela mesma empresa). Esse [link](https://pt.wikipedia.org/wiki/CUDA) possui explicações mais aprofundadas sobre o CUDA, que não serão abordadas aqui.
+Agora que sabemos o que é GPU, precisamos de uma forma para utilizar esse poder computacional e acelerar treinamentos de redes neurais. Para isso, utilizamos o Compute Unified Device Architecture (CUDA), que é uma API da NVidia, destinada a computação paralela e que atua nas placas gráficas (em especial, desenvolvidas pela mesma empresa). Caso haja interesse de saber mais sobre o CUDA, acesse [explicações mais aprofundadas sobre o tema](https://pt.wikipedia.org/wiki/CUDA), que não serão abordadas aqui.
 
 ## Setup para PyTorch
 
-O PyTorch é uma das mais famosas bibliotecas para desenvolvimento de sistemas de aprendizado de máquina, e muito conhecida por ser utilizada em grandes sistemas e como ferramenta essencial para pesquisadores da área. Você pode encontrar a [documentação do PyTorch aqui](https://pytorch.org/).
+O PyTorch é uma das mais famosas bibliotecas para desenvolvimento de sistemas de aprendizado de máquina, e muito conhecida por ser utilizada em grandes sistemas e como ferramenta essencial para pesquisadores da área. Você pode encontrar a [documentação do PyTorch aqui](https://pytorch.org/docs/stable/index.html).
 
 Tendo um ambiente Conda instalado e configurado, podemos entrar nesse ambiente com:
 
