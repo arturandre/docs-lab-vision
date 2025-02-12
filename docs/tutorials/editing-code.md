@@ -97,7 +97,71 @@ A partir desse ponto, se o programa foi executado corretamente, o ambiente de de
 - adicione a shell como Host e a máquina que você irá fazer o experimento.
 - o tunneling também permite que você acesse a máquina interna diretamente
 
-## Jupyter notebook / Jupyterlab
-TODO
+## Configurando Jupyter Notebook via SSH no VS Code
+
+### 1. Conectar via SSH
+No **VS Code**, clique no botão de SSH no canto inferior esquerdo e conecte-se ao servidor remoto da vision
+
+### 2. Instale o Jupyter Lab
+```bash
+pip install jupyterlab
+pip install --upgrade 'jupyter-server<2.0.0'
+```
+
+### 3. Gerar o arquivo de configuração do Jupyter
+No terminal da máquina remota execute:
+```bash
+jupyter notebook --generate-config
+```
+Isso criará o arquivo `~/.jupyter/jupyter_notebook_config.py`.
+
+### 4. Editar a configuração do Jupyter
+Edite o arquivo de configuração:
+```bash
+nano ~/.jupyter/jupyter_notebook_config.py
+```
+Abaixo de `c = get_config()` adicione a linha
+```python
+c.NotebookApp.token = '<user_science>'  # Ou outro token de sua escolha
+```
+
+### 5. Reiniciar a conexão SSH
+Reinicie a conexão SSH e conecte-se novamente em alguma máquina com **GPU**
+
+### 6. Iniciar o Jupyter Lab
+Na máquina, execute:
+```bash
+jupyter lab --no-browser --ip=0.0.0.0 --port=8888
+```
+O terminal mostrará um link contendo o prefixo da máquina semelhante a:
+```
+http://deepeleven:8888/lab?token=...
+```
+
+Copie esse link e substitua `...` pelo token definido:
+```
+http://deepeleven:8888/lab?token=<TOKEN>
+```
+
+### 7. Configurar o Kernel no Jupyter Notebook
+- Abra o notebook no VS Code
+- No canto superior direito, clique no botão `Select Kernel`
+- Selecione `Select Another Kernel` → `Existing Jupyter Server`
+- Cole o link modificado com o Token e conecte
+
+![img](../images/SelectKernel.png)
+
+### 8. Verificar se a GPU está ativa
+No Jupyter Notebook, execute:
+```python
+!nvidia-smi
+```
+Se tudo estiver correto, você verá informações sobre a GPU disponível
+
+Para desligar o jupyterlab é só dar um Ctrl+C no terminal
+
+## Possíveis problemas:
+- Se mais de um usuário ativo utilizar a mesma porta (ex: `8888`), pode ocorrer um conflito ao rodar o Jupyter. Caso enfrente problemas, tente alterar a porta
+- Por padrão, o Jupyter só aceita conexões locais (`localhost` ou `127.0.0.1`). Definir `0.0.0.0` permite que qualquer máquina na rede acesse o servidor Jupyter (desde que tenha permissão). Isso é necessário porque você está acessando o Jupyter de outra máquina via SSH
 
 
