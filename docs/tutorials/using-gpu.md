@@ -22,7 +22,7 @@ Tendo um ambiente Conda instalado e configurado, podemos entrar nesse ambiente c
 conda activate nome_ambiente
 ```
 
-Agora, é possível instalar todas as dependências necessárias nesse ambiente, incluindo o PyTorch. A partir de 2025, não é mais possível instalar pacotes torch usando conda, então é necessário fazer essa instalação usando pip. Para escolher a configuração da biblioteca que deseja instalar, entre nesse [link](https://pytorch.org/get-started/locally/) e escolha as opções desejadas. Se desejar, siga a configuração da imagem:
+Agora, é possível instalar todas as dependências necessárias nesse ambiente, incluindo o PyTorch. A partir de 2025, não é mais possível instalar pacotes torch usando conda, então é necessário fazer essa instalação usando pip. [Escolha a configuração da biblioteca que deseja instalar](https://pytorch.org/get-started/locally/) e selecione as opções desejadas. Se preferir, siga a configuração da imagem:
 
 ![PyTorch config](../images/pytorch-getting-started.png)
 
