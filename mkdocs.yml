@@ -10,6 +10,12 @@ theme:
         name: material
         features:
                 - content.action.edit
+                - content.code.copy
+
+plugins:
+  - glightbox
+  - git-committers:
+          repository: lucasmsobrinho/docs-lab-vision
 
 nav:
   - Início: index.md
@@ -24,8 +30,9 @@ nav:
   - Arquitetura da rede: architecture.md
   - Boas Práticas: best-practices.md
 
-
 markdown_extensions:
-  - footnotes
   - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
 
