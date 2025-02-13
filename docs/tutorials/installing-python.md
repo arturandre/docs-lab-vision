@@ -27,13 +27,21 @@ Ao executar este comando, o arquivo `.sh` será baixado no mesmo diretório em q
 
 Se não souber como acessar uma máquina da rede e-Science, confira o [tutorial de acesso aqui](./access.md)
 
-Agora, para instalar de fato o miniconda, devemos executar o bash script anteriormente baixado a partir do seguinte comando:
+Agora, para instalar de fato o miniconda, devemos, primeiro, mudar as permissões do bash script .sh anteriormente baixado a fim de autorizar sua execução e, posteriormente, executá-lo. Ambas as coisas podem ser feitas a partir da execução dos seguintes comandos:
+
+1. Permissão para executar o arquivo:
+
+```bash
+chmod +x Miniconda3-latest-Linux-x86_64.sh
+```
+
+2. Execução do arquivo:
 
 ```bash
 bash Miniconda3-latest-Linux-x86_64.sh
 ```
 
-Executado esse comando, será mostrado os termos de licença do Anaconda. Basta aceitá-los digitando 'yes' quando requisitado e configurar o local de instalação que o miniconda será instalado no seu usuário da Rede e-Science.
+Executado esse último comando, será mostrado os termos de licença do Anaconda. Basta aceitá-los digitando 'yes' quando requisitado e configurar o local de instalação que o miniconda será instalado no seu usuário da Rede e-Science.
 
 ### Configurando o miniconda no meu usuário da Rede e-Science
 
@@ -75,21 +83,21 @@ conda update conda
 Podemos tanto criar um ambiente anaconda sem nenhum pacote adicional quanto a partir de um arquivo de configuração. A primeira opção pode ser feita com:
 
 ```bash
-conda create --name myenv python=3.7 -y
+conda create --name <nome_do_ambiente> python=3.7 -y
 ```
 no caso do exemplo, informamos que a versão desejada do python é a 3.7 (se não informarmos nada, se usará uma versão predefinida do python).
 
 Outra forma de criar um ambiente python é usando um arquivo de configuração `.yml`, que já informe tanto os pacotes a serem usados quanto o nome do ambiente. Para isso, basta adicionar a flag '-f' e informar o arquivo `.yml`:
 
 ```bash
-conda create --name myenv --file=<arquivo.yml> -y
+conda create --name <nome_do_ambiente> --file=<arquivo.yml> -y
 ```
 #### Remoção de um ambiente anaconda
 Basta executar:
 ```bash
-conda remove --name <old_env> --all
+conda remove --name <nome_do_ambiente> --all
 ```
-onde `<old_env>` deve ser substituído pelo nome do ambiente a ser removido.
+onde `<nome_do_ambiente>` deve ser substituído pelo nome do ambiente a ser removido.
 
 #### Lista de ambientes anaconda criados
 O comando a seguir mostra todos os ambientes criados:
@@ -100,9 +108,9 @@ conda env list
 #### Ativação de um ambiente anaconda
 A fim de ativar um ambiente, basta executar:
 ```bash
-conda activate <env_name>
+conda activate <nome_do_ambiente>
 ```
-onde `<old_env>` deve ser substituído pelo nome do ambiente a ser ativado. Após rodar esse comando, um prefixo com o nome do ambiente deve aparecer antes do seu usuário na linha de comando como em '`(myenv)user_science@deepzero:~$ `', indicando que você está no ambiente desejado.
+onde `<nome_do_ambiente>` deve ser substituído pelo nome do ambiente a ser ativado. Após rodar esse comando, um prefixo com o nome do ambiente deve aparecer antes do seu usuário na linha de comando como em '`(myenv)user_science@deepzero:~$ `', em que há a indicação de que se está no ambiente `myenv`.
 
 #### Desativação de um ambiente anaconda
 Para sair de um ambiente, ou seja, desativá-lo, deve-se rodar o seguinte comando após ter entrado em algum ambiente anaconda:
@@ -111,15 +119,35 @@ conda deactivate
 ```
 
 #### Instalação de um pacote com anaconda
-A fim de instalar um pacote no ambiente anaconda, basta rodar:
+Existem dois modos de instalar um pacote no ambiente anaconda.
+
+1. O primeiro é usando o comando `conda install`, assim como é mostrado a seguir:
 ```bash
-conda install <package_name>
+conda install <nome_do_pacote>
 ```
-onde `<package_name>` deve ser substituído pelo nome do pacote a ser instalado. Veja um exemplo:
+onde `<nome_do_pacote>` deve ser substituído pelo nome do pacote a ser instalado. Veja um exemplo:
 
 ```bash
 conda install numpy
 ```
+
+2. O segundo é usando `pip`, um administrador para pacotes python.
+Para usá-lo, o seu ambiente deve conter o `pip`. Para isso, pode-se tanto rodar o comando:
+
+```bash
+conda install pip
+```
+dentro de um ambiente já criado quanto informar que se deseja instalar o pip junto à criação do ambiente a partir do seguinte comando:
+```bash
+conda create --name <nome_do_ambiente> python=3.7 pip
+```
+
+Uma vez instalado, basta executar:
+
+```bash
+pip install <nome_do_pacote>
+```
+no ambiente conda e o pip instalará o pacote informado.
 
 #### Verificar a lista de pacotes disponíveis no ambiente anaconda
 Para verificar os pacotes instalados e disponíveis no ambiente atual, basta executar:
