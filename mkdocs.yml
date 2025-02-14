@@ -37,7 +37,8 @@ nav:
   - Primeiros passos: getting-started.md
   - Regras: rules.md
   - Tutoriais:
-    - Instalando e configurando o ambiente de trabalho: tutorials/configuring-workplace.md
+    - Acessando a rede eScience: tutorials/access.md
+    - Instalando o Python: tutorials/installing-python.md
     - Acessando e editando código remotamente: tutorials/editing-code.md
     - Executando tarefas em segundo plano: tutorials/running-jobs.md
     - Quais recursos estão disponíveis e quanto estou usando?: tutorials/resources.md

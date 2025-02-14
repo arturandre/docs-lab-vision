@@ -2,8 +2,8 @@
 
 
 ## Primeiros acessos à Rede Vision
-- [Acessando a rede eScience via SSH]()
-- [Instalando Python com Miniconda]()
+- [Acessando a rede eScience via SSH](tutorials/access.md)
+- [Instalando Python com Miniconda](tutorials/installing-python.md)
 - [Executando processos em segundo plano com nohup e screen](tutorials/running-jobs.md)
 
 ## Trabalhando na Rede Vision 
