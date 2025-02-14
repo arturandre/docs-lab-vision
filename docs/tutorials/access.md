@@ -38,7 +38,6 @@ ssh-keygen -t rsa
 Durante a geração da chave, será necessário confirmar o local de salvamento (```~/.ssh/id_rsa```) e definir uma senha — ambos são opcionais e, caso não queira, basta pressionar Enter. Esse processo criará duas chaves: uma privada (```~/.ssh/id_rsa```), usada para autenticar suas conexões, e uma pública (```~/.ssh/id_rsa.pub```), que deve ser copiada para o servidor da Rede e-Science para obter acesso.
 
 ### 2. Copiando a chave SSH pública para a Rede e-Science
-
 Há 2 comandos possíveis para se copiar a chave para os servidores, sendo o primeiro:
 
 ```bash
@@ -136,4 +135,3 @@ Clique no botão copiar ao lado direito do código.
     document.getElementById("output").querySelector("code").textContent = result;
   }
 </script>
-
