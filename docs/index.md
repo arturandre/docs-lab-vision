@@ -7,7 +7,7 @@ Esta documentação está em construção.
 ## Principais páginas da documentação
 * [Primeiros Passos](getting-started.md) - Informações úteis para novos usuários da rede eScience.
 * [Regras e Cotas](rules.md) - (TODO)
-* [Arquitetura da rede eScience](architecture.md) - (TODO)
+* [Arquitetura da Rede eScience](architecture.md) - (TODO)
 * [Guia de boas práticas](best-practices.md) - (TODO)
 * Como conseguir ajuda? - (TODO)
 

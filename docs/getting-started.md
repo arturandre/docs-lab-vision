@@ -2,20 +2,20 @@
 
 
 ## Primeiros acessos à Rede Vision
-- [Acessando a rede eScience via SSH](tutorials/access.md)
-- [Instalando Python com Miniconda](tutorials/installing-python.md)
-- [Executando processos em segundo plano com nohup e screen](tutorials/running-jobs.md)
+- [Acessando à Rede Vision via SSH](tutorials/access.md)
+- [Setup Python com Miniconda](tutorials/installing-python.md)
+- [Execução de Processos em Background](tutorials/running-jobs.md)
 
 ## Trabalhando na Rede Vision 
-- [Editando código remotamente com vscode](tutorials/editing-code.md)
-- [Executando código remotamente com jupyter lab](tutorials/editing-code.md#configurando-jupyter-notebook-via-ssh-no-vs-code)
-- [GPUs e CUDA](tutorials/using-gpu.md)
-- [Recursos disponíveis e como usá-los](tutorials/resources.md) (TODO)
+- [Edição Remota de Código com VS Code](tutorials/editing-code.md)
+- [Execução Remota de Código com Jupyter Lab](tutorials/editing-code.md#configurando-jupyter-notebook-via-ssh-no-vs-code)
+- [Uso de GPU e CUDA](tutorials/using-gpu.md)
+- [Recursos Disponíveis e Como Usá-los](tutorials/resources.md) (TODO)
 
 ## Compartilhando e Transferindo Recursos
-- Página pessoal (TODO)
-- Transferência de dados (rsync, scp) (TODO)
-- Datasets compartilhados (/scratch/datasets/) (TODO)
+- Como Usar sua Página pessoal (TODO)
+- Transferência de Dados (rsync, scp) (TODO)
+- Datasets Compartilhados (/scratch/datasets/) (TODO)
 
 ## FAQ
 - TODO
