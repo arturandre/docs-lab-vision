@@ -34,17 +34,18 @@ plugins:
 
 nav:
   - Início: index.md
-  - Primeiros passos: getting-started.md
+  - Primeiros Passos: getting-started.md
   - Regras: rules.md
   - Tutoriais:
-    - Acessando a rede eScience: tutorials/access.md
-    - Instalando o Python: tutorials/installing-python.md
-    - Acessando e editando código remotamente: tutorials/editing-code.md
-    - Executando tarefas em segundo plano: tutorials/running-jobs.md
-    - Quais recursos estão disponíveis e quanto estou usando?: tutorials/resources.md
-    - Configurando o acesso a GPU: tutorials/using-gpu.md
-  - Arquitetura da rede: architecture.md
+    - Acesso à Rede Vision via SSH: tutorials/access.md
+    - Setup do Ambiente Python com Miniconda: tutorials/installing-python.md
+    - Edição Remota de Código (vscode + jupyterlab): tutorials/editing-code.md
+    - Execução de Processos em Background: tutorials/running-jobs.md
+    - Recursos e Uso do Sistema: tutorials/resources.md
+    - Uso da GPU e CUDA: tutorials/using-gpu.md
+  - Arquitetura da Rede: architecture.md
   - Boas Práticas: best-practices.md
+
 
 markdown_extensions:
   - admonition

@@ -1,4 +1,4 @@
-# Conectando-se à Rede e-Science via SSH
+# Acesso à Rede Vision via SSH
 
 A principal forma de acesso às máquina da rede eScience é via ssh. Este texto irá abordar como realizar essa conexão e duas formas de simplificar esse processo, eliminando a necessidade de digitação de senha e realizando conexão direta usando ssh tunneling.
 

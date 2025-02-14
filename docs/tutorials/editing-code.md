@@ -1,4 +1,4 @@
-# Acessando e editando código remotamente
+# Edição Remota de Código (vscode e jupterlab)
 
 Editar códigos que serão executados em uma máquina remota, como na rede e-Science, pode ser complicado, ainda mais se forem necessários testes, experimentações ou prototipagem. Tendo em vista que executar localmente e enviar o código via git não é produtivo, geralmente, ou usamos o VS Code para editar e executar programas diretamente na rede ou editamos e executamos jupyter notebooks na mesma. Por isso, nesta página, segue tanto o tutorial para a edição de programas alocados na rede e-Science a partir do VS Code quanto o tutorial para a configuração e uso de jupyter notebooks na rede.
 
