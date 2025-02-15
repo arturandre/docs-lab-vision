@@ -1,8 +1,8 @@
-# Executando tarefas em segundo plano
+# Execução de Processos em Background
 
 Executar tarefas longas, que podem demorar horas ou dias, exige um tratamento especial no comando, pois não é razoável manter o terminal aberto e conectado na sua máquina local durante esse período.
 
-Existem muitas formas de lidar com esse problema, e aqui iremos explorar duas delas - os comandos `&` e `screen`.
+Existem muitas formas de lidar com esse problema, e aqui iremos explorar três delas - os comandos `&`, `nohup` e `screen`.
 
 ## O comando `&`
 
@@ -19,7 +19,7 @@ O operador `&` permite que você execute um comando em segundo plano diretamente
 !!! danger "Cuidado"
 	Fechar o terminal irá matar o processo. Use o `&` em conjunto com o `nohup` para evitar isso.
 
-### Redirecionando a saída padrão com nohup
+## O comando `nohup`
 
 Caso você queira salvar a saída padrão dessa execução, é possível usar o comando `nohup` (no hang-up), que a redireciona para um arquivo designado (`nohup.out` por padrão). Além disso, ele permite que o processo continue rodando mesmo que você encerre a sessão SSH ou feche o terminal.
 

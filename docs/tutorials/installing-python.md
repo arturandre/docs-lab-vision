@@ -1,4 +1,4 @@
-# Instalando e configurando o seu ambiente de trabalho
+# Setup do Ambiente Python com Miniconda
 
 Configurar seu ambiente de trabalho corretamente é essencial para aproveitar os recursos do laboratório. Este documento fornece um guia passo a passo para configurações úteis mais comuns.
 

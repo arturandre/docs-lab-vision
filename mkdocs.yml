@@ -8,10 +8,25 @@ edit_uri: blob/master/docs/
 repo_name: docs-lab-vision
 
 theme:
-        name: material
-        features:
-                - content.action.edit
-                - content.code.copy
+  name: material
+  features:
+    - content.action.edit
+    - content.code.copy
+  palette:
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
 
 plugins:
   - glightbox
@@ -20,17 +35,18 @@ plugins:
 
 nav:
   - Início: index.md
-  - Primeiros passos: getting-started.md
+  - Primeiros Passos: getting-started.md
   - Regras: rules.md
   - Tutoriais:
-    - Instalando e configurando o ambiente de trabalho: tutorials/installing-python.md
-    - Conectando-se à rede com SSH: tutorials/access.md
-    - Acessando e editando código remotamente: tutorials/editing-code.md
-    - Executando tarefas em segundo plano: tutorials/running-jobs.md
-    - Quais recursos estão disponíveis e quanto estou usando?: tutorials/resources.md
-    - Configurando o acesso a GPU: tutorials/using-gpu.md
-  - Arquitetura da rede: architecture.md
+    - Acesso à Rede Vision via SSH: tutorials/access.md
+    - Setup do Ambiente Python com Miniconda: tutorials/installing-python.md
+    - Edição Remota de Código (vscode + jupyterlab): tutorials/editing-code.md
+    - Execução de Processos em Background: tutorials/running-jobs.md
+    - Recursos e Uso do Sistema: tutorials/resources.md
+    - Uso da GPU e CUDA: tutorials/using-gpu.md
+  - Arquitetura da Rede: architecture.md
   - Boas Práticas: best-practices.md
+
 
 markdown_extensions:
   - admonition

@@ -1,4 +1,6 @@
-# Quais recursos estão disponíveis e quanto estou usando?
+# Recursos e Uso do Sistema
+
+Quais recursos estão disponíveis e quanto estou usando?
 
 ## recursos
 - processamento cpu

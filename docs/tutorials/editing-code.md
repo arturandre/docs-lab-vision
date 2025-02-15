@@ -1,4 +1,4 @@
-# Acessando e editando código remotamente
+# Edição Remota de Código (vscode e jupterlab)
 
 Editar códigos que serão executados em uma máquina remota, como na rede e-Science, pode ser complicado, ainda mais se forem necessários testes, experimentações ou prototipagem. Tendo em vista que executar localmente e enviar o código via git não é produtivo, geralmente, ou usamos o VS Code para editar e executar programas diretamente na rede ou editamos e executamos jupyter notebooks na mesma. Por isso, nesta página, segue tanto o tutorial para a edição de programas alocados na rede e-Science a partir do VS Code quanto o tutorial para a configuração e uso de jupyter notebooks na rede.
 
@@ -36,7 +36,7 @@ ssh <user_science>@vision.ime.usp.br
 
 Agora, o VS Code irá configurar automaticamente tudo necessário. Agora, basta inserir sua senha da rede e-Science na barra superior e você estará conectado. No canto inferior esquerdo da tela, você verá algo como ```SSH: vision.ime.usp.br``` assim como segue na imagem:
 
-![Connected machine status](../images_editing-code/connected_machine.png)
+![Connected machine status](../images/connected_machine.png)
 
 !!! warning "Aviso" 
     Isso irá conectá-lo à máquina de acesso shell. Para encerrar a sessão, clique no ícone azul no canto inferior esquerdo e selecione 'Close Remote Connection', ou, para mudar de máquina, use o comando ```ssh <nome_da_maquina>``` no 'Command Palette', que pode ser aberto com `Ctrl + Shift + P` ou `F1`.
@@ -48,26 +48,26 @@ Agora, o VS Code irá configurar automaticamente tudo necessário. Agora, basta 
 
 Tendo em vista que a extensão Remote - SSH foi instalada, a aba 'Remote Explorer' foi adicionada em seu VS Code, como na imagem que segue:
 
-![Connected machines](../images_editing-code/remote_explorer.png)
+![Connected machines](../images/remote_explorer.png)
 
 A partir dela, é possível salvar as conexões estabelecidas a qualquer máquina da rede e-Science.
 
 #### Salvando uma nova conexão
 
-Para salvar uma nova conexão, primeiro, é necessário adicionar a máquina desejada como host no arquivo `config` da pasta `.ssh` assim como é indicado na sessão "Configurando o fácil acesso a máquinas da rede e-Science" na página [Tutorial SSH](./configuring-workplace.md). Posteriormente, basta clicar no ícone "+" como segue na imagem:
+Para salvar uma nova conexão, primeiro, é necessário adicionar a máquina desejada como host no arquivo `config` da pasta `.ssh` assim como é indicado em [Acesso à Rede Vision via SSH](./access.md). Posteriormente, basta clicar no ícone "+" como segue na imagem:
 
-![New conection](../images_editing-code/new_ssh_conection_vs_code.png)
+![New conection](../images/new_ssh_conection_vs_code.png)
 
 digitar `ssh <nome_maquina>` e apertar enter, assim como a sequência de imagens a seguir exemplifica para a conexão à máquina deepten da rede:
 
-![Connecting new machine1](../images_editing-code/new_machine1.png)
-![Connecting new machine2](../images_editing-code/new_machine2.png)
+![Connecting new machine1](../images/new_machine1.png)
+![Connecting new machine2](../images/new_machine2.png)
 
 Assim, a conexão será salva, de modo que, para se reconectar à máquina pelo VS Code basta seguir o caminho: 
 
 Aba "Remote Explorer" > passar o mouse em cima de `<nome_maquina>` > selecionar "Connect in New Window", assim como em:
 
-![Connecting new machine3](../images_editing-code/new_machine3.png)
+![Connecting new machine3](../images/new_machine3.png)
 
 ### 4. Acessando e editando remotamente
 
@@ -87,7 +87,7 @@ Quando se trabalha com ambientes Python alternativos (como Anaconda, por exemplo
 
 Agora, para confirmar se o python está sendo executado corretamente, basta abrir um programa python de sua preferência e clicar no símbolo de executar do VS Code no canto superior direito, como segue na imagem:
 
-![Executar arquivo python teste](../images_editing-code/python_run_test.png)
+![Executar arquivo python teste](../images/python_run_test.png)
 
 A partir desse ponto, se o programa foi executado corretamente, o ambiente de desenvolvimento está pronto, podendo compilar e editar códigos diretamente na sua conta e máquina sendo usada na rede e-Science em qualquer terminal aberto.
 
