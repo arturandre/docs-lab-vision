@@ -97,12 +97,27 @@ Clique no botão copiar ao lado direito do código.
 
 <br>
 <input id="userInput" type="text" placeholder="insira seu user vision">
-<button onclick="computeOutput()"> Gerar .ssh/config</button>
+<button class="btn" onclick="computeOutput()">Gerar .ssh/config</button>
 
 <style>
-.md-typeset pre > code {
-    max-height: 15rem;
-}
+  .btn {
+    background-color:rgb(45, 47, 110); 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  .btn:hover {
+    background-color:rgb(64, 81, 181);
+  }
+
+  .btn:active {
+    transform: scale(0.95);
+  }
 </style>
 
 
